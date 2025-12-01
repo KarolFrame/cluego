@@ -1,3 +1,4 @@
+import { LanguageSwitcher } from "../language-switcher/language-switcher";
 import { PrivacyModal } from "../privacy-modal.tsx/privacy-modal";
 import { TermsModal } from "../terms-modal.tsx/terms-modal";
 
@@ -12,6 +13,9 @@ export const Footer = () => {
           </span>
           <span>
             <TermsModal />
+          </span>
+          <span>
+            <LanguageSwitcher />
           </span>
         </div>
       </footer>

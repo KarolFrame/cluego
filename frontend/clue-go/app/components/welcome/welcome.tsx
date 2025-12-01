@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 
 export const Welcome = () => {
   const { t } = useTranslation();
@@ -8,13 +9,16 @@ export const Welcome = () => {
         <h3 className="text-4xl md:text-6xl md:w-[50%] text-center font-bold">
           {t("home.title")}
         </h3>
-        <p className="mt-5 text-xl md:text-2xl text-gray-300">
+        <p className="mt-5 text-xl md:text-2xl text-gray-700 dark:text-gray-300">
           {t("home.subtitle")}
         </p>
         <div className="flex flex-col md:flex-row gap-5">
-          <button className="p-4 px-7 rounded-xl text-xl bg-primary">
-            {t("home.signin")}
-          </button>
+          <Link to="/signin">
+            <button className="p-4 px-7 rounded-xl text-xl bg-primary">
+              {t("home.signin")}
+            </button>
+          </Link>
+
           <button className="border-2 p-4 px-7 rounded-xl text-xl">
             {t("home.signup")}
           </button>
