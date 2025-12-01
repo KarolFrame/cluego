@@ -1,0 +1,46 @@
+{
+  "home": {
+    "title": "Create and play custom scavenger hunts",
+    "subtitle": "Your adventures start here.",
+    "signin": "Sign in",
+    "signup": "Create account"
+  },
+
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "legal": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "contact": "Contact",
+
+    "privacy_title": "Privacy Policy",
+    "privacy_intro": "At ClueGo, we care about your privacy. This policy explains what data we collect and how we use it.",
+    "privacy_collect": "Data we collect",
+    "privacy_collect_text": "We collect information such as your email, username, and the scavenger hunts you create or play.",
+
+    "privacy_use": "How we use your data",
+    "privacy_use_text": "We use your data to improve your experience, save your progress, and offer personalized features.",
+
+    "privacy_rights": "Your rights",
+    "privacy_rights_text": "You may request to modify or delete your account and personal data at any time.",
+
+    "privacy_cookies": "Cookies",
+    "privacy_cookies_text": "We use cookies to remember your session and language preferences.",
+
+    "terms_title": "Terms of Use",
+    "terms_intro": "By using ClueGo, you agree to the following terms.",
+    "terms_allowed": "Allowed use",
+    "terms_allowed_text": "You may create and play hunts, share links, and use the app for personal or educational purposes.",
+
+    "terms_not_allowed": "Not allowed",
+    "terms_not_allowed_text": "You may not create illegal content, infringe copyright, or use the app to harass or cause harm.",
+
+    "terms_liability": "Limitation of liability",
+    "terms_liability_text": "ClueGo is not responsible for damages, losses, or accidents caused by user-created hunts.",
+
+    "terms_accounts": "Accounts",
+    "terms_accounts_text": "We may suspend accounts that misuse the platform. You may delete your account at any time."
+  }
+}

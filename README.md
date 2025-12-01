@@ -115,7 +115,3 @@ CLOUD_STORAGE_URL=optional
 ## 📄 License
 
 NO License © 2025 KarolFrame
-
----
-
-If you build something with this project, feel free to share it! 🎉

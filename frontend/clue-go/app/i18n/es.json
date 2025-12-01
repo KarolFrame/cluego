@@ -1,0 +1,46 @@
+{
+  "home": {
+    "title": "Crea y juega a yincanas personalizadas",
+    "subtitle": "Tus aventuras empiezan aquí.",
+    "signin": "Iniciar sesión",
+    "signup": "Crear cuenta"
+  },
+
+  "footer": {
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "legal": {
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso",
+    "contact": "Contacto",
+
+    "privacy_title": "Política de Privacidad",
+    "privacy_intro": "En ClueGo valoramos tu privacidad. Esta política explica qué datos recopilamos y cómo los utilizamos.",
+    "privacy_collect": "Datos que recopilamos",
+    "privacy_collect_text": "Recopilamos información como tu correo electrónico, nombre de usuario, y las yincanas que creas o juegas.",
+
+    "privacy_use": "Cómo usamos tus datos",
+    "privacy_use_text": "Utilizamos tus datos para mejorar la experiencia, guardar tu progreso y ofrecer funcionalidades personalizadas.",
+
+    "privacy_rights": "Tus derechos",
+    "privacy_rights_text": "Puedes solicitar modificar o eliminar tu cuenta y tus datos en cualquier momento.",
+
+    "privacy_cookies": "Cookies",
+    "privacy_cookies_text": "Usamos cookies para recordar tu sesión y tus preferencias de idioma.",
+
+    "terms_title": "Términos de Uso",
+    "terms_intro": "Al usar ClueGo, aceptas cumplir con estos términos.",
+    "terms_allowed": "Uso permitido",
+    "terms_allowed_text": "Puedes crear y jugar yincanas, compartir enlaces y usar la app de forma personal o educativa.",
+
+    "terms_not_allowed": "Uso no permitido",
+    "terms_not_allowed_text": "No puedes crear contenido ilegal, infringir derechos de autor, ni usar la app para acosar o causar daño.",
+
+    "terms_liability": "Limitación de responsabilidad",
+    "terms_liability_text": "ClueGo no se hace responsable de daños, pérdidas o accidentes derivados del uso de yincanas creadas por usuarios.",
+
+    "terms_accounts": "Cuentas",
+    "terms_accounts_text": "Podemos suspender cuentas que hagan mal uso de la plataforma. Puedes eliminar tu cuenta en cualquier momento."
+  }
+}
