@@ -42,5 +42,18 @@
 
     "terms_accounts": "Cuentas",
     "terms_accounts_text": "Podemos suspender cuentas que hagan mal uso de la plataforma. Puedes eliminar tu cuenta en cualquier momento."
+  },
+  "auth": {
+    "signup": "Crear cuenta",
+    "signin": "Iniciar sesión",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "create_account": "Crear cuenta",
+    "no_account": "¿No tienes cuenta?",
+    "have_account": "¿Ya tienes cuenta?",
+    "login": "Inicia sesión",
+    "password_error": "Debe tener mínimo 8 caracteres, una letra y un número",
+    "signin_succes": "Inicio de sesión exitoso"
   }
 }

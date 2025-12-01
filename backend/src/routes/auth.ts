@@ -8,13 +8,32 @@ const router = Router();
 router.post("/register", async (req, res) => {
   const { email, password, name } = req.body;
 
-  if (!email || !password) {
-    return res.status(400).json({ message: "Email and password required" });
+  if (!email || !password || !name) {
+    return res.status(400).json({ message: "All fields are required" });
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ message: "Invalid email format" });
+  }
+
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
+  // Min 8 chars, 1 letter, 1 number, symbols allowed
+  if (!passwordRegex.test(password)) {
+    return res.status(400).json({
+      message:
+        "Password must be at least 8 characters with at least one letter and one number",
+    });
   }
 
   const existing = await prisma.user.findUnique({ where: { email } });
   if (existing) {
     return res.status(400).json({ message: "Email already registered" });
+  }
+
+  const existingName = await prisma.user.findFirst({ where: { name } });
+  if (existingName) {
+    return res.status(400).json({ message: "Name already taken" });
   }
 
   const passwordHash = await bcrypt.hash(password, 10);

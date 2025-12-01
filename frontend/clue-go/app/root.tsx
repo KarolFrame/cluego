@@ -13,6 +13,9 @@ import "./app.css";
 import "./i18n";
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
+import { Toaster } from "sonner";
+
+import { useEffect } from "react";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -32,6 +35,18 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    if (prefersDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
   return (
     <html lang="en">
       <head>
@@ -43,6 +58,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
+        <Toaster />
         <Footer />
         <ScrollRestoration />
         <Scripts />

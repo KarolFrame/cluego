@@ -12,7 +12,7 @@ model User {
   email        String   @unique
   passwordHash String
 
-  name         String?
+  name         String?  @unique
   avatarUrl    String?
   bio          String?
   location     String?

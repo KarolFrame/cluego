@@ -18,10 +18,11 @@ export const Welcome = () => {
               {t("home.signin")}
             </button>
           </Link>
-
-          <button className="border-2 p-4 px-7 rounded-xl text-xl">
-            {t("home.signup")}
-          </button>
+          <Link to="/create-account">
+            <button className="border-2 p-4 px-7 rounded-xl text-xl">
+              {t("home.signup")}
+            </button>
+          </Link>
         </div>
       </div>
     </>

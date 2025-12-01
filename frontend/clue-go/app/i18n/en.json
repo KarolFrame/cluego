@@ -42,5 +42,18 @@
 
     "terms_accounts": "Accounts",
     "terms_accounts_text": "We may suspend accounts that misuse the platform. You may delete your account at any time."
+  },
+  "auth": {
+    "signup": "Create account",
+    "signin": "Sign in",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "create_account": "Create account",
+    "no_account": "Don't have an account?",
+    "have_account": "Already have an account?",
+    "login": "Sign in",
+    "password_error": "Password must be at least 8 characters with at least one letter and one number",
+    "signin_succes": "Successful login"
   }
 }
