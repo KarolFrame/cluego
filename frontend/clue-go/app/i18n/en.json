@@ -1,15 +1,22 @@
 {
   "home": {
-    "title": "Create and play custom scavenger hunts",
+    "title": "Create and play custom experiences",
     "subtitle": "Your adventures start here.",
     "signin": "Sign in",
     "signup": "Create account"
+  },
+  "header": {
+    "my_profile": "My Profile",
+    "edit_profile": "Edit Profile",
+    "dashboard": "Dashboard",
+    "log_out": "Log Out"
   },
 
   "footer": {
     "privacy": "Privacy",
     "terms": "Terms"
   },
+
   "legal": {
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
@@ -18,7 +25,7 @@
     "privacy_title": "Privacy Policy",
     "privacy_intro": "At ClueGo, we care about your privacy. This policy explains what data we collect and how we use it.",
     "privacy_collect": "Data we collect",
-    "privacy_collect_text": "We collect information such as your email, username, and the scavenger hunts you create or play.",
+    "privacy_collect_text": "We collect information such as your email, username, and the experiences you create or play.",
 
     "privacy_use": "How we use your data",
     "privacy_use_text": "We use your data to improve your experience, save your progress, and offer personalized features.",
@@ -32,17 +39,18 @@
     "terms_title": "Terms of Use",
     "terms_intro": "By using ClueGo, you agree to the following terms.",
     "terms_allowed": "Allowed use",
-    "terms_allowed_text": "You may create and play hunts, share links, and use the app for personal or educational purposes.",
+    "terms_allowed_text": "You may create and play experiences, share links, and use the app for personal or educational purposes.",
 
     "terms_not_allowed": "Not allowed",
     "terms_not_allowed_text": "You may not create illegal content, infringe copyright, or use the app to harass or cause harm.",
 
     "terms_liability": "Limitation of liability",
-    "terms_liability_text": "ClueGo is not responsible for damages, losses, or accidents caused by user-created hunts.",
+    "terms_liability_text": "ClueGo is not responsible for damages, losses, or accidents caused by user-created experiences.",
 
     "terms_accounts": "Accounts",
     "terms_accounts_text": "We may suspend accounts that misuse the platform. You may delete your account at any time."
   },
+
   "auth": {
     "signup": "Create account",
     "signin": "Sign in",
@@ -55,5 +63,32 @@
     "login": "Sign in",
     "password_error": "Password must be at least 8 characters with at least one letter and one number",
     "signin_succes": "Successful login"
+  },
+
+  "profile": {
+    "title": "Your profile",
+    "name": "Name",
+    "bio": "Bio",
+    "location": "Location",
+    "update_avatar": "Update photo",
+    "save": "Save changes",
+    "saving": "Saving...",
+    "logout": "Log out"
+  },
+
+  "dashboard": {
+    "welcome_back": "Welcome back, ",
+    "what_do_you_want": "What do you want to do today?",
+    "create_title": "Create an experience",
+    "create_desc": "Start from scratch or use a template.",
+    "explore_title": "Explore experiences",
+    "explore_desc": "Discover experiences created by other users.",
+    "activities_title": "Your activities",
+    "created_title": "Experiences you created",
+    "played_title": "Experiences you played",
+    "new_hunt": "+ New experience",
+    "view_all": "View all",
+    "cta_create": "Create now",
+    "cta_explore": "Explore"
   }
 }

@@ -1,15 +1,22 @@
 {
   "home": {
-    "title": "Crea y juega a yincanas personalizadas",
+    "title": "Crea y juega experiencias personalizadas",
     "subtitle": "Tus aventuras empiezan aquí.",
     "signin": "Iniciar sesión",
     "signup": "Crear cuenta"
+  },
+  "header": {
+    "my_profile": "Mi Perfil",
+    "edit_profile": "Editar Perfil",
+    "dashboard": "Menú Principal",
+    "log_out": "Cerrar Sesión"
   },
 
   "footer": {
     "privacy": "Privacidad",
     "terms": "Términos"
   },
+
   "legal": {
     "privacy": "Política de privacidad",
     "terms": "Términos de uso",
@@ -18,10 +25,10 @@
     "privacy_title": "Política de Privacidad",
     "privacy_intro": "En ClueGo valoramos tu privacidad. Esta política explica qué datos recopilamos y cómo los utilizamos.",
     "privacy_collect": "Datos que recopilamos",
-    "privacy_collect_text": "Recopilamos información como tu correo electrónico, nombre de usuario, y las yincanas que creas o juegas.",
+    "privacy_collect_text": "Recopilamos información como tu correo electrónico, nombre de usuario y las experiencias que creas o juegas.",
 
     "privacy_use": "Cómo usamos tus datos",
-    "privacy_use_text": "Utilizamos tus datos para mejorar la experiencia, guardar tu progreso y ofrecer funcionalidades personalizadas.",
+    "privacy_use_text": "Utilizamos tus datos para mejorar tu experiencia, guardar tu progreso y ofrecer funcionalidades personalizadas.",
 
     "privacy_rights": "Tus derechos",
     "privacy_rights_text": "Puedes solicitar modificar o eliminar tu cuenta y tus datos en cualquier momento.",
@@ -32,17 +39,18 @@
     "terms_title": "Términos de Uso",
     "terms_intro": "Al usar ClueGo, aceptas cumplir con estos términos.",
     "terms_allowed": "Uso permitido",
-    "terms_allowed_text": "Puedes crear y jugar yincanas, compartir enlaces y usar la app de forma personal o educativa.",
+    "terms_allowed_text": "Puedes crear y jugar experiencias, compartir enlaces y usar la app con fines personales o educativos.",
 
     "terms_not_allowed": "Uso no permitido",
-    "terms_not_allowed_text": "No puedes crear contenido ilegal, infringir derechos de autor, ni usar la app para acosar o causar daño.",
+    "terms_not_allowed_text": "No puedes crear contenido ilegal, infringir derechos de autor ni usar la app para acosar o causar daño.",
 
     "terms_liability": "Limitación de responsabilidad",
-    "terms_liability_text": "ClueGo no se hace responsable de daños, pérdidas o accidentes derivados del uso de yincanas creadas por usuarios.",
+    "terms_liability_text": "ClueGo no se hace responsable de daños, pérdidas o accidentes derivados del uso de experiencias creadas por usuarios.",
 
     "terms_accounts": "Cuentas",
     "terms_accounts_text": "Podemos suspender cuentas que hagan mal uso de la plataforma. Puedes eliminar tu cuenta en cualquier momento."
   },
+
   "auth": {
     "signup": "Crear cuenta",
     "signin": "Iniciar sesión",
@@ -55,5 +63,32 @@
     "login": "Inicia sesión",
     "password_error": "Debe tener mínimo 8 caracteres, una letra y un número",
     "signin_succes": "Inicio de sesión exitoso"
+  },
+
+  "profile": {
+    "title": "Tu perfil",
+    "name": "Nombre",
+    "bio": "Biografía",
+    "location": "Ubicación",
+    "update_avatar": "Actualizar foto",
+    "save": "Guardar cambios",
+    "saving": "Guardando...",
+    "logout": "Cerrar sesión"
+  },
+
+  "dashboard": {
+    "welcome_back": "¡Bienvenida de nuevo, ",
+    "what_do_you_want": "¿Qué quieres hacer hoy?",
+    "create_title": "Crear una experiencia",
+    "create_desc": "Empieza desde cero o usa una plantilla.",
+    "explore_title": "Explorar experiencias",
+    "explore_desc": "Descubre experiencias creadas por otros usuarios.",
+    "activities_title": "Tus actividades",
+    "created_title": "Experiencias que has creado",
+    "played_title": "Experiencias jugadas",
+    "new_hunt": "+ Nueva experiencia",
+    "view_all": "Ver todo",
+    "cta_create": "Crear ahora",
+    "cta_explore": "Explorar"
   }
 }

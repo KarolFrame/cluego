@@ -2,8 +2,10 @@ import { useTranslation } from "react-i18next";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { toast } from "sonner";
+import { useAuth } from "~/context/auth-context";
 
 export const SignInComponent = () => {
+  const { login } = useAuth();
   const navigate = useNavigate();
   const { t } = useTranslation();
 
@@ -36,10 +38,7 @@ export const SignInComponent = () => {
         return;
       }
       toast.success(t("auth.signin_succes"));
-      localStorage.setItem("token", data.token);
-
-      localStorage.setItem("user", JSON.stringify(data.user));
-
+      login(data.user, data.token);
       navigate("/dashboard");
     } catch (err) {
       console.log(err);

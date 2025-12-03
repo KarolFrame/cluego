@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { toast } from "sonner";
+import { useAuth } from "~/context/auth-context";
 
 export const CreateAccountComponent = () => {
+  const { login } = useAuth();
   const navigate = useNavigate();
   const { t } = useTranslation();
 
@@ -38,9 +40,7 @@ export const CreateAccountComponent = () => {
         toast.error(error);
         return;
       }
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("user", JSON.stringify(data.user));
-
+      login(data.user, data.token);
       navigate("/dashboard");
     } catch (error) {
       console.log(error);

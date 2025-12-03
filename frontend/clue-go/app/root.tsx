@@ -16,6 +16,7 @@ import { Footer } from "./components/footer/footer";
 import { Toaster } from "sonner";
 
 import { useEffect } from "react";
+import { AuthProvider } from "./context/auth-context";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -31,6 +32,22 @@ export const links: Route.LinksFunction = () => [
   {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/icon?family=Material+Icons",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/icon?family=Material+Icons+Outlined",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/icon?family=Material+Icons+Round",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/icon?family=Material+Icons+Sharp",
   },
 ];
 
@@ -56,12 +73,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Toaster />
-        <Footer />
-        <ScrollRestoration />
-        <Scripts />
+        <AuthProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Toaster />
+          <Footer />
+          <ScrollRestoration />
+          <Scripts />
+        </AuthProvider>
       </body>
     </html>
   );
