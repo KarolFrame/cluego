@@ -5,8 +5,15 @@
     "rootDir": "src",
     "outDir": "dist",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "types": ["node"],
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "baseUrl": "./src",
+    "paths": {
+      "*": ["*"]
+    }
   },
   "include": ["src"],
-  "exclude": ["prisma.config.ts", "prisma"]
+  "exclude": ["prisma.config.ts", "prisma"],
+  "moduleResolution": "bundler"
 }

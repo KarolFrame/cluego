@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { prisma } from "../prisma";
+import prisma from "../prisma";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { authMiddleware, AuthRequest } from "../middleware/auth";
@@ -18,7 +18,6 @@ router.post("/register", async (req, res) => {
   }
 
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
-  // Min 8 chars, 1 letter, 1 number, symbols allowed
   if (!passwordRegex.test(password)) {
     return res.status(400).json({
       message:

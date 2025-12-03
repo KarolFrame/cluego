@@ -17,5 +17,40 @@ model User {
   bio          String?
   location     String?
 
+  experiences Experience[]
+
   createdAt    DateTime @default(now())
 }
+
+model Experience {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String?
+  imageUrl    String?
+  difficulty  String?
+  mode        String
+  isPublished Boolean   @default(false)
+  accessCode  String?   @unique
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  ownerId     Int
+  owner       User       @relation(fields: [ownerId], references: [id])
+
+  steps       Step[]
+}
+
+model Step {
+  id           Int      @id @default(autoincrement())
+  experienceId Int
+  title        String
+  clueText     String?
+  type         String   // e.g. "text", "number", "qr", etc.
+  answer       String?
+  hint         String?
+  timeLimit    Int?
+  order        Int
+
+  experience   Experience  @relation(fields: [experienceId], references: [id])
+}
+

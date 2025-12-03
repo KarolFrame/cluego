@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { upload } from "../middleware/upload";
 import cloudinary from "../services/cloudinary";
-import { prisma } from "../prisma";
+import prisma from "../prisma";
 import { authMiddleware, AuthRequest } from "../middleware/auth";
 
 const router = Router();
