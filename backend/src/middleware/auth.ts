@@ -2,6 +2,12 @@ import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import prisma from "../prisma";
 
+export interface AuthRequest extends Request {
+  user?: {
+    id: number;
+  };
+}
+
 export const authMiddleware = async (
   req: Request,
   res: Response,

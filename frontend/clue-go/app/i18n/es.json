@@ -99,9 +99,10 @@
   },
   "create_experience": {
     "title": "Crear Experiencia",
+    "name": "Nombre",
     "description": "Descripción",
     "difficulty": "Dificultad",
-    "mode_offocial": "Oficial",
+    "mode_official": "Oficial",
     "mode_custom": "Personalizada",
     "mode_outdoor": "Exterior",
     "imageURL": "Imagen de portada"

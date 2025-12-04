@@ -32,6 +32,7 @@ export const UserProfileComponent = () => {
     enabled: !!id,
   });
   const userData = data;
+  console.log(userData);
   return (
     <>
       <div className="flex flex-col items-center mt-5 justify-center gap-5 mx-7">

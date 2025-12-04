@@ -2,21 +2,21 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { API_URL, getAuthHeaders } from "../lib/api";
 import { toast } from "sonner";
 
-export const useDeleteStep = (stepId: number, experienceId: string) => {
+export const useDeleteExperience = (stepId: number) => {
   const qc = useQueryClient();
 
   return useMutation({
     mutationFn: async () => {
-      const res = await fetch(`${API_URL}/api/steps/${stepId}`, {
+      const res = await fetch(`${API_URL}/api/experiences/${stepId}`, {
         method: "DELETE",
         headers: getAuthHeaders(),
       });
 
       if (!res.ok) {
-        toast.error("Error deleting step");
-        throw new Error("Error deleting step");
+        toast.error("Error deleting expereince");
+        throw new Error("Error deleting expereince");
       }
-      toast.success("Succes step delted");
+      toast.success("experiences delete");
       return res.json();
     },
 

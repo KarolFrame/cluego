@@ -39,6 +39,7 @@ export const StepCard = ({ step }: any) => {
       <input
         className="w-full p-2 mb-2 rounded bg-gray-100 dark:bg-gray-800"
         placeholder="Answer"
+        type={form.type}
         value={form.answer}
         onChange={(e) => handleChange("answer", e.target.value)}
       />

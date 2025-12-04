@@ -5,8 +5,11 @@ import { IconComponent } from "../icon-component/icon-component";
 import { useAddStep } from "~/hooks/use-add-step";
 import { StepCard } from "../step-card/step-card";
 import { useUpdateExperience } from "~/hooks/use-update-experience";
+import { useDeleteExperience } from "~/hooks/use-delete-experience";
+import { useNavigate } from "react-router";
 
 export default function ExperienceEditorComponent() {
+  const navigate = useNavigate();
   const { id } = useParams();
 
   const { data, isLoading } = useExperienceEditor(id!);
@@ -35,6 +38,13 @@ export default function ExperienceEditorComponent() {
       ).value,
       mode: (document.getElementById("mode") as HTMLSelectElement).value,
     });
+  };
+  const numberID = Number(id);
+  const { mutate: deleteStep } = useDeleteExperience(numberID);
+
+  const handleDelete = () => {
+    deleteStep();
+    navigate("/dashboard");
   };
 
   return (
@@ -72,6 +82,12 @@ export default function ExperienceEditorComponent() {
                 className="mt-3 px-4 py-2 bg-primary text-white rounded-md"
               >
                 Save experience
+              </button>
+              <button
+                onClick={handleDelete}
+                className="mt-3 px-4 py-2 border-2 text-white rounded-md ml-5"
+              >
+                Delete experience
               </button>
             </section>
 

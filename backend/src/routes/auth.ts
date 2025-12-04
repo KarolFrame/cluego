@@ -2,7 +2,8 @@ import { Router } from "express";
 import prisma from "../prisma";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { authMiddleware, AuthRequest } from "../middleware/auth";
+import { authMiddleware } from "../middleware/auth";
+import { Request } from "express";
 
 const router = Router();
 router.post("/register", async (req, res) => {
@@ -92,9 +93,9 @@ router.post("/login", async (req, res) => {
   });
 });
 
-router.get("/me", authMiddleware, async (req: AuthRequest, res) => {
+router.get("/me", authMiddleware, async (req: Request, res) => {
   const user = await prisma.user.findUnique({
-    where: { id: req.userId },
+    where: { id: req.user?.id },
   });
 
   res.json({

@@ -22,6 +22,7 @@ router.get("/:id", async (req, res) => {
             description: true,
             imageUrl: true,
             isPublished: true,
+            mode: true,
           },
         },
       },

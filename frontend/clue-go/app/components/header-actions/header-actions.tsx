@@ -24,7 +24,7 @@ export const HeaderActions = () => {
   if (!user) return null;
 
   return (
-    <div className="relative ml-7" ref={menuRef}>
+    <div className="relative" ref={menuRef}>
       <img
         src={user.avatarUrl || defaultAvatar}
         className="w-10 h-10 md:w-15 md:h-15 rounded-full hover:scale-105 transition-all cursor-pointer object-cover"

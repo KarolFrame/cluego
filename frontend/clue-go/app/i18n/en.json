@@ -99,9 +99,10 @@
   },
   "create_experience": {
     "title": "Create Expereince",
+    "name": "Name",
     "description": "Description",
     "difficulty": "Difficulty",
-    "mode_offocial": "Official",
+    "mode_official": "Official",
     "mode_custom": "Custom",
     "mode_outdoor": "Outdoor",
     "imageURL": "Image"
