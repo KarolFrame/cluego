@@ -1,19 +1,27 @@
 import { useTranslation } from "react-i18next";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { toast } from "sonner";
 import { useAuth } from "~/context/auth-context";
 
 export const SignInComponent = () => {
-  const { login } = useAuth();
+  const { login, token } = useAuth();
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const [route, setRoute] = useState("/signin");
 
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (token) {
+      setRoute("/dashboard");
+      navigate(route);
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });

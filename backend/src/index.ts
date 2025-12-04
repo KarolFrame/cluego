@@ -3,6 +3,8 @@ import cors from "cors";
 import authRouter from "./routes/auth";
 import profileRouter from "./routes/profile";
 import experienceRouter from "./routes/experience-routes";
+import stepsRouter from "./routes/steps-routes";
+import userRoutes from "./routes/user";
 
 const app = express();
 
@@ -12,6 +14,8 @@ app.use(express.json());
 app.use("/api/auth", authRouter);
 app.use("/api/profile", profileRouter);
 app.use("/api/experiences", experienceRouter);
+app.use("/api/steps", stepsRouter);
+app.use("/api/users", userRoutes);
 
 app.get("/", (_req, res) => {
   res.send("ClueGo API running");

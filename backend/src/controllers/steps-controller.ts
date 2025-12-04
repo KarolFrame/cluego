@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import prisma from "prisma";
+import prisma from "../prisma";
 
 export const createStep = async (req: Request, res: Response) => {
   try {
@@ -64,6 +64,10 @@ export const deleteStep = async (req: Request, res: Response) => {
   try {
     const stepId = Number(req.params.id);
 
+    if (isNaN(stepId)) {
+      return res.status(400).json({ message: "Invalid step id" });
+    }
+
     const step = await prisma.step.findUnique({
       where: { id: stepId },
       include: { experience: true },
@@ -78,6 +82,55 @@ export const deleteStep = async (req: Request, res: Response) => {
 
     res.json({ message: "Step deleted" });
   } catch (error) {
+    console.error("DELETE STEP ERROR:", error);
     res.status(500).json({ message: "Error deleting step" });
+  }
+};
+
+export const addStep = async (req: Request, res: Response) => {
+  try {
+    const {
+      experienceId,
+      title,
+      type,
+      clueText,
+      answer,
+      hint,
+      order,
+      timeLimit,
+    } = req.body;
+
+    if (!experienceId || !title || !type) {
+      return res.status(400).json({ message: "Missing fields" });
+    }
+
+    const experience = await prisma.experience.findUnique({
+      where: { id: experienceId },
+    });
+
+    if (!experience) {
+      return res.status(404).json({ message: "Experience not found" });
+    }
+
+    if (experience.ownerId !== req.user!.id) {
+      return res.status(403).json({ message: "Not authorized" });
+    }
+
+    const step = await prisma.step.create({
+      data: {
+        experienceId,
+        title,
+        type,
+        clueText,
+        answer,
+        hint,
+        timeLimit,
+        order,
+      },
+    });
+
+    res.status(201).json({ step });
+  } catch (err) {
+    res.status(500).json({ message: "Error creating step" });
   }
 };

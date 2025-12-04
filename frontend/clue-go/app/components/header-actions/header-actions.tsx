@@ -42,6 +42,13 @@ export const HeaderActions = () => {
           "
         >
           <Link
+            to={`/user/${user.id}`}
+            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-t-lg"
+            onClick={() => setOpen(false)}
+          >
+            {t("header.my_profile")}
+          </Link>
+          <Link
             to="/profile"
             className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-t-lg"
             onClick={() => setOpen(false)}

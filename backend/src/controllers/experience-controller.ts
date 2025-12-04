@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import prisma from "prisma";
+import prisma from "../prisma";
 
 export const createExperience = async (req: Request, res: Response) => {
   try {
@@ -147,5 +147,28 @@ export const publishExperience = async (req: Request, res: Response) => {
     res.json({ experience: published });
   } catch (error) {
     res.status(500).json({ message: "Server error publishing experience" });
+  }
+};
+
+export const getExperienceEditor = async (req: Request, res: Response) => {
+  try {
+    const experienceId = Number(req.params.id);
+
+    const experience = await prisma.experience.findUnique({
+      where: { id: experienceId },
+      include: { steps: true },
+    });
+
+    if (!experience) {
+      return res.status(404).json({ message: "Experience not found" });
+    }
+
+    if (experience.ownerId !== req.user!.id) {
+      return res.status(403).json({ message: "Not authorized" });
+    }
+
+    res.json({ experience });
+  } catch (error) {
+    res.status(500).json({ message: "Server error loading editor data" });
   }
 };

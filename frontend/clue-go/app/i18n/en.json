@@ -90,5 +90,20 @@
     "view_all": "View all",
     "cta_create": "Create now",
     "cta_explore": "Explore"
+  },
+  "user": {
+    "followers": "followers",
+    "experiences": "experiences",
+    "sec_experiences": "EXPERIENCES",
+    "edit_experience": "Edit Experience"
+  },
+  "create_experience": {
+    "title": "Create Expereince",
+    "description": "Description",
+    "difficulty": "Difficulty",
+    "mode_offocial": "Official",
+    "mode_custom": "Custom",
+    "mode_outdoor": "Outdoor",
+    "imageURL": "Image"
   }
 }

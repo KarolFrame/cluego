@@ -17,6 +17,8 @@ import { Toaster } from "sonner";
 
 import { useEffect } from "react";
 import { AuthProvider } from "./context/auth-context";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClient } from "./query-client";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -74,12 +76,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body className="min-h-screen flex flex-col">
         <AuthProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Toaster />
-          <Footer />
-          <ScrollRestoration />
-          <Scripts />
+          <QueryClientProvider client={queryClient}>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Toaster />
+            <Footer />
+            <ScrollRestoration />
+            <Scripts />
+          </QueryClientProvider>
         </AuthProvider>
       </body>
     </html>

@@ -4,12 +4,13 @@ import {
   createStep,
   updateStep,
   deleteStep,
+  addStep,
 } from "../controllers/steps-controller";
 
 const router = Router();
 
-router.post("/:id/steps", authMiddleware, createStep);
-router.put("/steps/:id", authMiddleware, updateStep);
-router.delete("/steps/:id", authMiddleware, deleteStep);
+router.post("/", authMiddleware, addStep);
+router.put("/:id", authMiddleware, updateStep);
+router.delete("/:id", authMiddleware, deleteStep);
 
 export default router;

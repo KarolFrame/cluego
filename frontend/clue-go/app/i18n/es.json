@@ -77,7 +77,7 @@
   },
 
   "dashboard": {
-    "welcome_back": "¡Bienvenida de nuevo, ",
+    "welcome_back": "Bienvenid@ de nuevo, ",
     "what_do_you_want": "¿Qué quieres hacer hoy?",
     "create_title": "Crear una experiencia",
     "create_desc": "Empieza desde cero o usa una plantilla.",
@@ -90,5 +90,20 @@
     "view_all": "Ver todo",
     "cta_create": "Crear ahora",
     "cta_explore": "Explorar"
+  },
+  "user": {
+    "followers": "seguidores",
+    "experiences": "experiencias",
+    "sec_experiences": "EXPERIENCIAS",
+    "edit_experience": "Editar Experiencia"
+  },
+  "create_experience": {
+    "title": "Crear Experiencia",
+    "description": "Descripción",
+    "difficulty": "Dificultad",
+    "mode_offocial": "Oficial",
+    "mode_custom": "Personalizada",
+    "mode_outdoor": "Exterior",
+    "imageURL": "Imagen de portada"
   }
 }

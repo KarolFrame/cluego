@@ -7,4 +7,7 @@ export default [
   route("create-account", "routes/create-account.tsx"),
   route("dashboard", "routes/dashboard.tsx"),
   route("profile", "routes/profile.tsx"),
+  route("user/:id", "routes/user-profile.tsx"),
+  route("create", "routes/create-experience.tsx"),
+  route("experience-editor/:id", "routes/experience-editor.tsx"),
 ] satisfies RouteConfig;
